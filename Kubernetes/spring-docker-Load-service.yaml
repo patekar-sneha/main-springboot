@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-docker-service
+
+spec:
+  selector:
+    app: spring-boot-docker
+    # give this when there is pods and service for selector and labels --
+    #release: 0
+
+
+  ports:
+  - name: http
+    port: 80
+# if you are running on any cloud provider remove the nodePort and change type as LoadBalancer
+  type: LoadBalancer

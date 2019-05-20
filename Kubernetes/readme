@@ -1,0 +1,6 @@
+Docker:
+
+build image-  docker build -f Dockerfile -t demo-docker .
+show images- docker images
+Login-  docker login -u=snehpatekar -p=Nescafe1993
+push to docker-hub - docker tag d20a4f166339(image no from show images) snehpatekar/demo-docker:firsttry
