@@ -12,6 +12,6 @@ spec:
 
   ports:
   - name: http
-    port: 80
+    port: 8085
 # if you are running on any cloud provider remove the nodePort and change type as LoadBalancer
   type: LoadBalancer
