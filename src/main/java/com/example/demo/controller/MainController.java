@@ -27,7 +27,7 @@ public class MainController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
-		String url = "http://localhost:8080"+movieName;
+		String url = "http://35.184.46.26:8087"+movieName;
 		return restTemplate.exchange(url, HttpMethod.GET, entity, String.class)
 				.getBody();
 	}
@@ -37,7 +37,7 @@ public class MainController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
-		String url = "http://localhost:8086"+"/movies/all";
+		String url = "http://35.184.184.175:8086"+"/movies/all";
 		return restTemplate.exchange(url, HttpMethod.GET, entity, String.class)
 				.getBody();
 	}
@@ -48,7 +48,7 @@ public class MainController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		HttpEntity<MovieReview> entity = new HttpEntity<MovieReview>(movieReview, headers);
-		String url = "http://localhost:8086"+"/movies/review";
+		String url = "http://35.184.184.175:8086"+"/movies/review";
 		return restTemplate.exchange(url, HttpMethod.POST, entity, String.class)
 				.getBody();
 	}
